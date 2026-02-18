@@ -1,0 +1,4 @@
+interface:
+  display_name: "React Native Solo Guardrails"
+  short_description: "Guardrails RN/Expo solo pour prod 2-5 ans"
+  default_prompt: "Use $react-native-solo-guardrails to design or review my Expo Router React Native app with production guardrails."
