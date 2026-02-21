@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS Premium Craft for Expo"
+  short_description: "Build premium iOS-feel React Native Expo interfaces"
+  default_prompt: "Use $ios-premium-craft-expo to design or polish a React Native + Expo interface with premium iOS visual craft and production-ready implementation."

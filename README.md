@@ -1,49 +1,66 @@
-# React Native Solo Guardrails
+# React Native Skills Workspace
 
-Skill de guardrails pour apps React Native + Expo Router, orienté solo-dev en production sur 2 à 5 ans.
+This repository contains two complementary Codex skills for React Native + Expo.
 
-## Objectif
+## Skills
 
-Donner une méthode claire pour:
-- structurer une architecture maintenable;
-- auditer un codebase existant;
-- prioriser les fixes critiques (scalabilité, perf, sécurité, tests, release);
-- préparer les upgrades Expo SDK / React Native.
+### 1) `react-native-solo-guardrails`
 
-## Ce que contient le skill
+Production guardrails for solo builders (2 to 5 year horizon) on React Native + Expo Router.
 
-- `SKILL.md`: workflow principal d'exécution.
-- `scripts/rn_guardrails_audit.sh`: audit rapide automatisé du repo.
-- `references/golden-architecture.md`: structure recommandée `src/app` route-only + frontières.
-- `references/rules-prioritized.md`: 60 règles classées CRITICAL/HIGH/MEDIUM/LOW.
-- `references/top-25-detailed-rules.md`: bad/good/pièges des règles les plus importantes.
-- `references/checklists.md`: checklists pre-commit, release, upgrade, perf, a11y, sécurité.
-- `references/compatibility-matrix-2026-02-18.md`: matrice Expo/RN/libs au 18 février 2026.
-- `references/baseline-and-plan.md`: baseline stack, top décisions/erreurs, plan 7 jours.
+Main focus:
+- architecture and maintainability;
+- scalability, performance, security, tests, release discipline;
+- Expo SDK and React Native upgrade readiness.
 
-## Usage rapide
+Key assets:
+- `react-native-solo-guardrails/SKILL.md`
+- `react-native-solo-guardrails/scripts/rn_guardrails_audit.sh`
+- `react-native-solo-guardrails/references/*`
 
-Depuis un repo React Native/Expo:
+### 2) `ios-premium-craft-expo`
 
-```bash
-bash scripts/rn_guardrails_audit.sh <project-root>
+Premium iOS-first visual craft skill for React Native + Expo.
+
+Main focus:
+- distinctive, high-end iOS UI direction;
+- tokenized design system (color, type, spacing, motion, materials);
+- polished motion, accessibility-safe fallbacks, performance-aware UI implementation;
+- visual QA and repeatable quality checks.
+
+Key assets:
+- `ios-premium-craft-expo/SKILL.md`
+- `ios-premium-craft-expo/scripts/*`
+- `ios-premium-craft-expo/references/*`
+
+## Deep Research Sources
+
+These two research documents were used to build the skills:
+
+1. `deep-research-report.md`
+2. `deep-research-ui.md`
+
+## Quick Usage
+
+Use the skills by name in your prompt:
+
+```text
+$react-native-solo-guardrails review my Expo Router architecture and give prioritized fixes.
+$ios-premium-craft-expo redesign this screen to feel premium iOS and provide production-ready code.
 ```
 
-Puis traiter en priorité:
-1. Toutes les règles `CRITICAL`.
-2. Les règles `HIGH` à fort impact produit.
-3. Le reste selon contexte.
+Run the guardrails audit script:
 
-## Quand utiliser ce skill
+```bash
+bash react-native-solo-guardrails/scripts/rn_guardrails_audit.sh <project-root>
+```
 
-- Création d'une nouvelle base Expo Router.
-- Revue architecture/qualité d'un projet existant.
-- Préparation d'une release OTA (EAS Update).
-- Préparation d'un upgrade SDK/RN.
-- Mise en place d'une discipline tests/CI/CD.
+Run visual quality scripts:
 
-## Limites
-
-- Référence temporelle figée au 18 février 2026 pour les versions.
-- Ne couvre pas en profondeur un système de responsive tablette/iPad (breakpoints, split-view) dédié.
-
+```bash
+node ios-premium-craft-expo/scripts/check-no-raw-colors.js .
+node ios-premium-craft-expo/scripts/check-touch-target-min.js .
+node ios-premium-craft-expo/scripts/check-motion-reduced.js .
+node ios-premium-craft-expo/scripts/check-typography-scale.js .
+bash ios-premium-craft-expo/scripts/smoke-a11y-modes.sh .
+```
